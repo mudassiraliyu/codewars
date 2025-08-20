@@ -3,27 +3,27 @@
  */
 
  function evenOrOdd(number){
-    if( number % 2 === 0){
-        return "Even";
-    }else{
+    if(number % 2 === 0){
+        return "Even"
+    } else{
         return "Odd"
     }
  }
+
 //We need a function that can transform a number (integer) into a string.
 
-function integerToString(num){
+function intergerToString(num){
     return num.toString();
 }
 
 //Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
 
-function doubleChars(str){
+function doubleChar(str){
     let result = "";
     for(let char of str){
         result += char + char;
     }
     return result;
-
 }
 /* 
  students grade
@@ -34,20 +34,18 @@ Numerical Score	Letter Grade
 60 <= score < 70	'D'
 0 <= score < 60	'F'*/
  
- 
 function grade(scores){
-    
- if(scores >= 90 && scores <= 100){
-   return 'A';
- } else if( scores >= 80 && scores <= 90){
-     return 'B';
- } else if( scores >= 70 && scores <= 80){
-    return 'C';
- } else if( scores >= 60 && scores <= 70){
-    return 'D';
- } else{
-    return 'F';
- }
+    if(scores >= 90 && scores >= 100){
+        return "A"
+    } else if( scores >= 80 && scores <= 90){
+        return "B"
+    } else if( scores >= 70 && scores <= 80){
+        return "C"
+    } else if( scores >= 60 && scores <= 70){
+        return "D"
+    } else{
+        return "Fail"
+    }
 }
 
 
