@@ -16,8 +16,8 @@ function getCount(str){
      }
 
     }
-    return count
-}
+     return count;
+    }
 
 /*n this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
@@ -29,7 +29,29 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
  */
 
 function filter_list(arr){
-    return arr.filter( item => typeof item === "number");
+    return arr.filter( item => typeof item === "number")
 }
 
-console.log( filter_list([1,2,4,6,'y','a','b']));
+console.log( filter_list([1,2,4,6,'y','a','b']))
+
+/*The new zookeeper has lost track of how many animals are in the zoo because the last person to do the count thought it would be funny to do it in binary.
+ Write a function that can help the zookeper convert the binary count. Input will be an object where key:value-pairs will represent an animal and a binary number.
+ Output should be an integer that equals the sum of all the animals in the zoo.*/
+
+ function countAnimals(animals){
+    let total = 0
+    for( let animal in animals){
+        // covert binary string to decimal
+      total += parseInt(animals[animal], 2)
+    }
+
+    return total;
+ }
+
+ let zoo = {
+    pandas: "101",
+    monkeys: "10",
+    lions: "111"
+ }
+
+ console.log(countAnimals(zoo))
