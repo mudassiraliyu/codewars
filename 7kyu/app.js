@@ -55,3 +55,16 @@ console.log( filter_list([1,2,4,6,'y','a','b']))
  }
 
  console.log(countAnimals(zoo))
+
+ /*Create a function that accepts an array of names,
+  and returns an array of each name with its first letter capitalized and the remainder in lowercase.
+  */
+ function capNames(names){
+    return names.map( names => {
+      return names.charAt(0).toUpperCase() + names.slice(1).toLowerCase()
+    })
+   
+ }
+
+ const myArr = ["mudassir", "aLiYu", "johN", "marYaM"]
+ console.log( capNames(myArr));
